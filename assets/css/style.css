@@ -5,43 +5,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* header */
-header {
-  /* to make it stick to the top */
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 4rem;
-  border-bottom: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: gray;
-}
-
-.logo-link-header {
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-decoration: none;
-  color: black;
-}
-
-.shop-link-header {
-  font-size: 1rem;
-  text-decoration: none;
-  color: black;
-}
-
-.cart-link-header,
-.profile-link-header {
-  height: 1.2rem;
-  width: 1.2rem;
-  object-fit: cover;
-  object-position: center;
-}
-
 /* main */
 .home-tagline-n-background-image {
   position: relative;
@@ -66,63 +29,11 @@ header {
   text-align: center;
 }
 
-/* footer */
-footer {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgb(17, 17, 17);
-  color: white;
-  font-size: 0.7rem;
-  padding: 1rem 0;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-}
-
-.logo-footer,
-.quick-links-text-footer,
-.follow-us-text-footer {
-  margin-bottom: 0.4rem;
-}
-
-.quick-links-footer,
-.follow-us-link-footer {
-  text-decoration: none;
-  color: rgb(173, 173, 173);
-}
-
 /* tablet and up*/
 @media (min-width: 768px) {
-  /* header */
-  header {
-    height: 5rem;
-  }
-
-  .logo-link-header {
-    font-size: 1.8rem;
-  }
-
-  .shop-link-header {
-    font-size: 1.6rem;
-  }
-
-  .cart-link-header,
-  .profile-link-header {
-    height: 1.8rem;
-    width: 1.8rem;
-  }
-
   /* main */
   .home-tagline {
     font-size: 2.8rem;
-  }
-
-  /* footer */
-  footer {
-    font-size: 1.2rem;
   }
 }
 
@@ -131,14 +42,5 @@ section {
   /* main */
   .home-tagline {
     font-size: 4.5rem;
-  }
-
-  /* footer */
-  footer {
-    padding: 2rem 0;
-  }
-
-  .logo-footer {
-    font-size: 2.8rem;
   }
 }

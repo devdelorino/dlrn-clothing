@@ -1,0 +1,58 @@
+header {
+  /* to make it stick to the top */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 4rem;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
+}
+
+.logo-link-header {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+}
+
+.shop-link-header {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.cart-link-header,
+.profile-link-header {
+  height: 1.2rem;
+  width: 1.2rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* tablet and up*/
+@media (min-width: 768px) {
+  /* header */
+  header {
+    height: 5rem;
+  }
+
+  .logo-link-header {
+    font-size: 1.8rem;
+  }
+
+  .shop-link-header {
+    font-size: 1.6rem;
+  }
+
+  .cart-link-header,
+  .profile-link-header {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
