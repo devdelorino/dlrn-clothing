@@ -1,16 +1,16 @@
 header {
   /* to make it stick to the top */
   position: sticky;
-  top: 0;
-  background-color: white;
+  top: 2%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 4rem;
-  border-bottom: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: gray;
+  border: solid;
+  border-width: 1px;
+  background-color: rgb(244 241 235);
+  border-color: rgb(74 49 41);
 }
 
 .logo-link-header {
@@ -37,6 +37,7 @@ header {
 
 /* tablet and up*/
 @media (min-width: 768px) {
+
   /* header */
   header {
     height: 5rem;

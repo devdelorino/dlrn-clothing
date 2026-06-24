@@ -89,6 +89,5 @@ html {
 
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
-
   }
 }
