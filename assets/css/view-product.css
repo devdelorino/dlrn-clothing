@@ -1,15 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'DM Serif Display', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: rgb(74 49 41);
-  background-color: rgb(244 241 235);
 }
 
 body {
   padding: 0 6%;
+  background-color: rgb(244 241 235);
 }
 
+/* MAIN */
 .product-container {
   display: flex;
   flex-direction: column;
@@ -31,17 +32,18 @@ body {
 }
 
 .product-name {
+  font-family: 'DM Serif Display', sans-serif;
   font-size: 2rem;
   margin-bottom: 0.8rem;
 }
 
 .product-price {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 3rem;
 }
 
 .product-description {
-  font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   margin-bottom: 4rem;
 }
@@ -51,7 +53,6 @@ body {
 }
 
 .size-button {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   background-color: rgb(244 241 235);
   border: solid;
@@ -63,13 +64,15 @@ body {
 .quantity-button {
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 1.8rem;
 }
 
 .subtract-button,
 .add-button {
+  font-family: 'DM Serif Display', sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
+  background-color: rgb(244 241 235);
   padding: .2rem 1rem;
   border: solid;
   border-width: 1px;
@@ -79,7 +82,28 @@ body {
   font-size: 1.3rem;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  background-color: rgb(244 241 235);
   width: 100%;
   border: solid;
   border-width: 1px;
+}
+
+.add-to-bag-button {
+  font-size: 1.1rem;
+  color: white;
+  background-color: rgb(74 49 41);
+  padding: 1rem 0;
+  border: solid;
+  border-width: 1px;
+  margin-bottom: 5rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(74 49 41);
+  padding: 5%;
+}
+
+.shop-section-footer {
+  color: white;
 }
