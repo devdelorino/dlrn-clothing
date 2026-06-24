@@ -22,6 +22,7 @@ function displayProducts() {
       </div>
     </div>
   `;
+
     } else if (product.category === 'shorts') {
       shortsHTML += `
     <div class="product-container">
@@ -35,6 +36,7 @@ function displayProducts() {
       </div>
     </div>
   `;
+
     } else if (product.category === 'hoodie') {
       hoodieHTML += `
     <div class="product-container">
@@ -48,6 +50,7 @@ function displayProducts() {
       </div>
     </div>
   `;
+
     } else if (product.category === 'jeans') {
       jeansHTML += `
     <div class="product-container">
