@@ -101,9 +101,30 @@ body {
 /* FOOTER */
 footer {
   background-color: rgb(74 49 41);
-  padding: 5%;
+  padding: 0 6%;
 }
 
-.shop-section-footer {
+.shop-section-footer,
+.brand-section-footer,
+.socials-section-footer {
   color: white;
+  padding: 3rem 0 2rem 0;
+}
+
+.shop-section,
+.brand-section,
+.socials-section {
+  color: white;
+  padding-bottom: 1.5rem;
+}
+
+.logo-footer {
+  margin-top: 1rem;
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  border-top: solid;
+  border-top-width: 1px;
+  border-top-color: white;
+  padding: 6% 0;
 }
