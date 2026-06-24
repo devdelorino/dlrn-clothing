@@ -3,10 +3,10 @@
   padding: 0;
   font-family: 'DM Serif Display', sans-serif;
   color: rgb(74 49 41);
+  background-color: rgb(244 241 235);
 }
 
 body {
-  background-color: rgb(244 241 235);
   padding: 0 10%;
 }
 
@@ -56,6 +56,30 @@ body {
   background-color: rgb(244 241 235);
   border: solid;
   border-width: 1px;
-  padding: 0.8rem 1.1rem;
+  padding: 0.8rem 1rem;
   margin-right: 0.1rem;
+}
+
+.quantity-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.subtract-button,
+.add-button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: .2rem 1rem;
+  border: solid;
+  border-width: 1px;
+}
+
+.quantity-input {
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  border: solid;
+  border-width: 1px;
 }
