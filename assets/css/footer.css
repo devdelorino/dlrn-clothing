@@ -31,21 +31,23 @@ footer {
 }
 
 /* tablet and up*/
-@media (min-width: 768px) {
-  /* footer */
-  footer {
-    font-size: 1.2rem;
-  }
-}
+@media (min-width: 768px) {}
 
 /* desktop */
 @media (min-width: 1024px) {
-  /* footer */
   footer {
-    padding: 2rem 0;
+    padding: 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
   }
 
   .logo-footer {
-    font-size: 2.8rem;
+    padding: 1rem 2.8rem;
   }
 }

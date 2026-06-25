@@ -14,9 +14,14 @@ body {
 
 /*----- STORY SECTION -----*/
 .story-container {
+  display: flex;
   margin-top: 3rem;
   background-color: rgb(74 49 41);
   padding: 3rem 2rem;
+}
+
+.story-video {
+  display: none;
 }
 
 .story-title {
@@ -74,6 +79,7 @@ body {
 
 .shop-by-category-title {
   font-family: 'DM Serif Display', sans-serif;
+  font-size: 1.8rem;
 }
 
 .shop-by-category-description {
@@ -116,4 +122,34 @@ body {
 @media (min-width: 768px) {}
 
 /* DESKTOP */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+
+  /*----- BODY'S DEFAULT VALUE -----*/
+  body {
+    padding: 0 14%;
+    background-color: rgb(244 241 235);
+  }
+
+  /*----- STORY SECTION -----*/
+  .story-video {
+    display: flex;
+    width: 95%;
+  }
+
+  /*----- SHOP BY CATEGORY SECTION -----*/
+  .shop-by-category-description {
+    width: 25rem;
+    margin-bottom: 3rem;
+  }
+
+  .category-section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 0.8rem;
+  }
+
+  .product-container {
+    margin-top: 0;
+  }
+}
