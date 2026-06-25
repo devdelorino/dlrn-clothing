@@ -6,11 +6,11 @@
 }
 
 body {
-  padding: 0 6%;
+  padding: 3% 6%;
   background-color: rgb(244 241 235);
 }
 
-/* MAIN */
+/*----- MAIN -----*/
 .product-container {
   display: flex;
   flex-direction: column;
