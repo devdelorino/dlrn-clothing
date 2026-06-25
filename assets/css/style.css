@@ -1,46 +1,20 @@
-/* make all of the elements with these style */
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DM Serif Display', sans-serif;
+  color: rgb(74 49 41);
 }
 
-/* main */
-.home-tagline-n-background-image {
-  position: relative;
+body {
+  padding: 0 10%;
 }
 
-.home-background-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.home-tagline {
-  position: absolute;
-  color: white;
-  font-weight: 800;
-  font-size: 1.5rem;
-
-  /* to make this center inside a container*/
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* tablet and up*/
+/*----- TABLET AND UP -----*/
 @media (min-width: 768px) {
-  /* main */
-  .home-tagline {
-    font-size: 2.8rem;
-  }
+
 }
 
-/* desktop */
+/* DESKTOP */
 @media (min-width: 1024px) {
-  /* main */
-  .home-tagline {
-    font-size: 4.5rem;
-  }
+
 }

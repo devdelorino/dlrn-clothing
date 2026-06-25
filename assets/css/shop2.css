@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(74 49 41);
+}
+
+body {
+  padding: 0 6%;
+  background-color: rgb(244 241 235);
+}
+
+.clothes-nav {
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.8rem 0;
+  top: 4rem;
+  background: rgb(207, 207, 207);
+  z-index: 1;
+}
+
+.clothes-a {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.clothes-header {
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  row-gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.product-container {
+  height: 100%;
+  width: 70%;
+}
+
+.product-image {
+  object-fit: cover;
+  object-position: center;
+  height: 80%;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 0.6rem;
+  box-shadow: 0px 0px 20px 0px rgba(150, 150, 150, 0.2);
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* tablet and up*/
+@media (min-width: 768px) {
+
+  /* main */
+  .t-shirts-text {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2.8rem;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+
+  /* main */
+  .t-shirts-text {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
