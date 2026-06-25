@@ -83,7 +83,6 @@ body {
 }
 
 .product-container {
-  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -97,7 +96,7 @@ body {
 
 .product-info {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
