@@ -1,3 +1,4 @@
+/*----- RESET THE DEFAULT VALUE FOR EVERY ELEMENT -----*/
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,13 @@
   color: rgb(74 49 41);
 }
 
+/*----- BODY'S DEFAULT VALUE -----*/
 body {
   padding: 3% 6%;
   background-color: rgb(244 241 235);
 }
 
+/*----- STORY SECTION -----*/
 .story-container {
   margin-top: 3rem;
   background-color: rgb(74 49 41);
@@ -31,6 +34,37 @@ body {
 .story-description {
   color: white;
   line-height: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.read-story-button {
+  display: flex;
+}
+
+.read-story-button-text {
+  color: white;
+}
+
+.read-story-button-text,
+.read-story-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+.read-story-icon-container {
+  border-left-width: 0;
+}
+
+.read-story-button-icon {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 /*----- TABLET AND UP -----*/
