@@ -1,74 +1,49 @@
 import { products } from '../data/products.js';
 
-displayProducts();
+renderProducts('all');
 
-function displayProducts() {
-  let tShirtHTML = '';
-  let shortsHTML = '';
-  let hoodieHTML = '';
-  let jeansHTML = '';
+/*----- CALLING THE FUNCTION THAT GENERATE PRODUCTS AFTER CLICKING -----*/
+document.querySelector('.js-all-button').addEventListener('click', () => {
+  renderProducts('all');
+});
+
+document.querySelector('.js-tees-button').addEventListener('click', () => {
+  renderProducts('tees');
+});
+
+document.querySelector('.js-bottoms-button').addEventListener('click', () => {
+  renderProducts('bottoms');
+});
+
+document.querySelector('.js-outerwear-button').addEventListener('click', () => {
+  renderProducts('outerwear');
+});
+
+document.querySelector('.js-headwear-button').addEventListener('click', () => {
+  renderProducts('headwear');
+});
+
+/*----- FUNCTION THAT GENERATE PRODUCTS -----*/
+function renderProducts(categoryParam) {
+  let productsHTML = '';
 
   products.forEach((product) => {
-    if (product.category === 't-shirts') {
-      tShirtHTML += `
-    <div class="product-container">
-      <img src="assets/images/products/${product.image}"
-        class="product-image">
-      <div class="product-name">
-        ${product.name}
-      </div>
-      <div class="product-price">
-        ₱${product.price}
-      </div>
-    </div>
-  `;
-
-    } else if (product.category === 'shorts') {
-      shortsHTML += `
-    <div class="product-container">
-      <img src="assets/images/products/${product.image}"
-        class="product-image">
-      <div class="product-name">
-        ${product.name}
-      </div>
-      <div class="product-price">
-        ₱${product.price}
-      </div>
-    </div>
-  `;
-
-    } else if (product.category === 'hoodie') {
-      hoodieHTML += `
-    <div class="product-container">
-      <img src="assets/images/products/${product.image}"
-        class="product-image">
-      <div class="product-name">
-        ${product.name}
-      </div>
-      <div class="product-price">
-        ₱${product.price}
-      </div>
-    </div>
-  `;
-
-    } else if (product.category === 'jeans') {
-      jeansHTML += `
-    <div class="product-container">
-      <img src="assets/images/products/${product.image}"
-        class="product-image">
-      <div class="product-name">
-        ${product.name}
-      </div>
-      <div class="product-price">
-        ₱${product.price}
-      </div>
-    </div>
-  `;
+    if (categoryParam === product.category || categoryParam === 'all') {
+      productsHTML += `
+        <div class="product-container">
+          <div class="product-image-container">
+            <img src="assets/images/products/${product.image}" class="product-image">
+          </div>
+          <div class="product-name">
+            ${product.name}
+          </div>
+          <div class="product-price">
+            ${product.price}
+          </div>
+        </div>
+      `;
     }
   });
 
-  document.querySelector('.js-t-shirts-grid').innerHTML = tShirtHTML;
-  document.querySelector('.js-shorts-grid').innerHTML = shortsHTML;
-  document.querySelector('.js-hoodie-grid').innerHTML = hoodieHTML;
-  document.querySelector('.js-jeans-grid').innerHTML = jeansHTML;
+  document.querySelector('.product-section-grid').innerHTML = productsHTML;
 }
