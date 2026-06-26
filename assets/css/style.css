@@ -121,7 +121,7 @@ body {
 /*----- TABLET AND UP -----*/
 @media (min-width: 768px) {}
 
-/* DESKTOP */
+/*----- DESKTOP -----*/
 @media (min-width: 1024px) {
 
   /*----- BODY'S DEFAULT VALUE -----*/
