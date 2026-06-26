@@ -16,8 +16,9 @@ body {
 .back-to-shop-button {
   font-size: 1.2rem;
   font-weight: 500;
+  text-decoration: none;
   display: flex;
-  background-color: rgb(244 241 235);
+  width: fit-content;
   border: none;
   margin-top: 3rem;
 }
@@ -126,11 +127,16 @@ body {
   .product-container {
     display: flex;
     flex-direction: row;
-    margin-top: 1.5rem;
+    margin-left: 8rem;
   }
 
   .product-image-container {
-    width: 180rem;
+    height: 100%;
+    width: 150rem;
     margin: 0 2rem 0 0;
+  }
+
+  .product-description {
+    margin-bottom: 15rem;
   }
 }
