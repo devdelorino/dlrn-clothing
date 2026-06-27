@@ -10,13 +10,13 @@ function renderProduct() {
 
   /*----- LOOPING THROUGH PRODUCTS -----*/
   products.forEach((product) => {
-
     /*----- IF PRODUCT ID OF OUR PRODUCTS IS EQUAL TO selectedProductId (THIS WAS IN OUR localStorage) -----*/
     if (product.id === selectedProductId) {
+
       /*----- LOOP THROUGH SIZES AND SAVE IT IN VARIABLE (ACCUMULATOR) -----*/
-      product.size.forEach((size) => {
+      product.size.forEach((size, index) => {
         productSizeHTML += `
-        <button class="size-button">
+        <button class="size-button js-size-button" data-size="${product.size[index]}">
           ${size}
         </button>
       `;
@@ -52,7 +52,7 @@ function renderProduct() {
             </button>
           </div>
 
-          <button class="add-to-bag-button js-add-to-bag-button" data-id="${product.id}">
+          <button class="add-to-bag-button js-add-to-bag-button">
             ADD TO BAG
           </button>
         </div>
@@ -64,9 +64,25 @@ function renderProduct() {
   document.querySelector('.js-product-container').innerHTML = productHTML;
 }
 
-/*----- SAVE THE PRODUCT ID IN localStorage WHEN WE ADD TO BAG -----*/
-document.querySelectorAll('.js-add-to-bag-button').forEach((addToBagButton) => {
-  addToBagButton.addEventListener('click', () => {
-    localStorage.setItem('cartProductId', button.dataset.id);
+let sizeResult = '';
+
+document.querySelectorAll('.js-size-button').forEach((sizeButton) => {
+  sizeButton.addEventListener('click', () => {
+    sizeResult = sizeButton.dataset.size;
   });
+});
+
+document.querySelector('.js-add-to-bag-button').addEventListener('click', () => {
+
+  /*----- IF THERE'S NO SIZE CLICKED -----*/
+  if (!sizeResult) {
+    console.log('You didn\'t put any size!');
+
+  } else {
+    console.log(sizeResult);
+  }
+});
+
+/*----- SAVE THE PRODUCT ID IN localStorage WHEN WE ADD TO BAG -----*/
+document.querySelector('.js-add-to-bag-button').addEventListener('click', () => {
 });
