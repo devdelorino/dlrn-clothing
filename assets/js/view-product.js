@@ -1,13 +1,25 @@
 import { products } from "../data/products.js";
 
 const selectedProductId = localStorage.getItem('selectedProductId');
-
 let productHTML = '';
-let getProductValue = [];
+let productSizeHTML = '';
+
+/*----- LOOPING THROUGH PRODUCTS -----*/
 products.forEach((product) => {
+
+  /*----- IF PRODUCT ID OF OUR PRODUCTS IS EQUAL TO selectedProductId (THIS WAS IN OUR localStorage) -----*/
   if (product.id === selectedProductId) {
-    getProductValue = product;
-    productHTML += `
+    /*----- LOOP THROUGH SIZES AND SAVE IT IN VARIABLE (ACCUMULATOR) -----*/
+    product.size.forEach((size) => {
+      productSizeHTML += `
+        <button class="size-button">
+          ${size}
+        </button>
+      `;
+    });
+
+    /*----- SAVE HTML IN A VARIABLE -----*/
+    productHTML = `
       <div class="product-image-container">
         <img src="assets/images/products/${product.image}" class="product-image">
       </div>
@@ -23,15 +35,7 @@ products.forEach((product) => {
         </p>
 
         <div class="size-button-container">
-          <button class="size-button">
-            S
-          </button>
-          <button class="size-button">
-            M
-          </button>
-          <button class="size-button">
-            L
-          </button>
+          ${productSizeHTML}
         </div>
 
         <div class="quantity-button">
@@ -52,4 +56,5 @@ products.forEach((product) => {
   }
 });
 
+/*----- RENDERING IN HTML -----*/
 document.querySelector('.js-product-container').innerHTML = productHTML;

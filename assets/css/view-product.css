@@ -101,7 +101,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(244 241 235);
   width: 100%;
-  border: solid;
+  border-left: none;
+  border-right: none;
+  border-top: solid;
+  border-bottom: solid;
   border-width: 1px;
 }
 
