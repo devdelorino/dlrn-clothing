@@ -56,7 +56,7 @@ export function renderProducts(categoryParam) {
   products.forEach((product) => {
     if (categoryParam === product.category || categoryParam === 'all') {
       productsHTML += `
-        <a href="../../../view-product.html" class="product-container-link">
+        <a href="view-product.html" class="product-container-link">
           <div class="product-container" data-id="${product.id}">
             <div class="product-image-container">
               <img src="assets/images/products/${product.image}" class="product-image">
