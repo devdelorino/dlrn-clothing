@@ -3,7 +3,7 @@ import { products } from "../../data/products.js";
 /*----- CALLING THE FUNCTION THAT GENERATE PRODUCTS AFTER CLICKING -----*/
 export function renderCategories() {
 
-/*----- GENERATING CATEGORY FROM HOME PAGE -----*/
+  /*----- GENERATING CATEGORY FROM HOME PAGE -----*/
   const category = localStorage.getItem('category');
 
   if (category === 'tees') {
@@ -18,10 +18,11 @@ export function renderCategories() {
   } else if (category === 'headwear') {
     renderProducts('headwear');
 
-  } else if (category === 'all') {
+  } else {
     renderProducts('all');
-  }
+  } 
 
+  /*----- RENDERING A CATEGORY IN TITLE BUTTONS  -----*/
   document.querySelector('.js-all-button').addEventListener('click', () => {
     renderProducts('all');
   });
