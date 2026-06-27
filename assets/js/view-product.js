@@ -82,7 +82,3 @@ document.querySelector('.js-add-to-bag-button').addEventListener('click', () => 
     console.log(sizeResult);
   }
 });
-
-/*----- SAVE THE PRODUCT ID IN localStorage WHEN WE ADD TO BAG -----*/
-document.querySelector('.js-add-to-bag-button').addEventListener('click', () => {
-});
