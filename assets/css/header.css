@@ -24,15 +24,21 @@ header {
 }
 
 .logo-link-header {
-  font-family: 'DM Serif Display', sans-serif;
-  font-size: 1.4rem;
   text-decoration: none;
 }
 
+.logo-header {
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 1.4rem;
+}
+
 .shop-link-header {
-  font-size: 1rem;
-  font-weight: 600;
   text-decoration: none;
+}
+
+.shop-header {
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .cart-link-header,

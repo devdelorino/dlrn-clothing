@@ -30,7 +30,7 @@ export const products = [
     id: '6a3d3915dce0e3e2a5abc117',
     category: 'tees',
     name: 'Long Sleeve Thermal',
-    
+
     size: ['S', 'M'],
     image: 'long-sleeve-thermal-model.avif',
     price: 45,

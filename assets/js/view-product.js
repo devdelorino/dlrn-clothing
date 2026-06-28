@@ -79,23 +79,30 @@ document.querySelector('.js-add-to-bag-button').addEventListener('click', () => 
 
   /*----- IF THERE'S NO SIZE CLICKED -----*/
   if (!sizeResult) {
-    console.log('You didn\'t put any size!');
 
   } else {
-    console.log(sizeResult);
-    console.log(quantityValue.value);
 
-    cart.push(
-      {
-        productId: selectedProductId,
-        size: sizeResult,
-        quantity: Number(quantityValue.value)
-      }
-    );
-    console.log(cart);
+    /*----- FIND MATCHING CART, AND IF IT FINDS IT, IT GETS THE WHOLE INDEX ONCE THE CONDITION IS TRUE AT A SPECIFIC ITERATION -----*/
+    const findMatchingCart = cart.find(cartItem => cartItem.id === selectedProductId && cartItem.size === sizeResult);
+
+    /*----- IF TRUTHY -----*/
+    if (findMatchingCart) {
+
+      /*----- findMatchingCart POINTS TO THE SAME OBJECT (REFERENCE) -----*/
+      findMatchingCart.quantity += Number(quantityValue.value);
+
+    } else {
+      cart.push(
+        {
+          id: selectedProductId,
+          size: sizeResult,
+          quantity: Number(quantityValue.value)
+        }
+      );
+    }
   }
 });
 
 /*----- CREATE A DEFAULT QUANTITY VALUE -----*/
-const quantityValue = document.querySelector('.js-quantity-input')
+const quantityValue = document.querySelector('.js-quantity-input');
 quantityValue.value = 1;
