@@ -1,10 +1,12 @@
 import { products } from "../data/products.js";
+import { cart } from "../data/cart.js";
+
+const selectedProductId = localStorage.getItem('selectedProductId');
 
 renderProduct();
 
 /*----- RENDER PRODUCT IN HTML -----*/
 function renderProduct() {
-  const selectedProductId = localStorage.getItem('selectedProductId');
   let productHTML = '';
   let productSizeHTML = '';
 
@@ -46,7 +48,7 @@ function renderProduct() {
             <button class="subtract-button">
               -
             </button>
-            <input type="text" class="quantity-input" placeholder="1">
+            <input type="text" class="quantity-input js-quantity-input">
             <button class="add-button">
               +
             </button>
@@ -64,6 +66,7 @@ function renderProduct() {
   document.querySelector('.js-product-container').innerHTML = productHTML;
 }
 
+/*----- LOOP THROUGH SIZES AND GET THE CLICKED SIZE AND SAVE IT IN VARIABLE BY USING DATASET -----*/
 let sizeResult = '';
 
 document.querySelectorAll('.js-size-button').forEach((sizeButton) => {
@@ -80,5 +83,19 @@ document.querySelector('.js-add-to-bag-button').addEventListener('click', () => 
 
   } else {
     console.log(sizeResult);
+    console.log(quantityValue.value);
+
+    cart.push(
+      {
+        productId: selectedProductId,
+        size: sizeResult,
+        quantity: Number(quantityValue.value)
+      }
+    );
+    console.log(cart);
   }
 });
+
+/*----- CREATE A DEFAULT QUANTITY VALUE -----*/
+const quantityValue = document.querySelector('.js-quantity-input')
+quantityValue.value = 1;
