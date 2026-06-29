@@ -2,7 +2,6 @@ import { cart } from "../data/cart.js";
 import { products } from "../data/products.js";
 
 if (cart.length === 0) {
-  console.log(cart);
 
   document.querySelector('.js-cart-container').innerHTML = `
     <div class=empty-cart-container>

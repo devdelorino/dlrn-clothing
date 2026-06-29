@@ -101,8 +101,6 @@ document.querySelector('.js-add-to-bag-button').addEventListener('click', () => 
       );
     }
 
-    console.log(cart);
-
     localStorage.setItem('localStorageCart', JSON.stringify(cart));
   }
 });
