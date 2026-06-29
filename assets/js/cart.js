@@ -1,9 +1,12 @@
 import { cart } from "../data/cart.js";
 import { products } from "../data/products.js";
 
-if (cart.length === 0) {
+renderCart();
 
-  document.querySelector('.js-cart-container').innerHTML = `
+function renderCart() {
+  if (cart.length === 0) {
+
+    document.querySelector('.js-cart-container').innerHTML = `
     <div class=empty-cart-container>
       <h1 class="empty-cart-title">
         CART
@@ -15,17 +18,17 @@ if (cart.length === 0) {
     </div>
   `;
 
-} else {
-  let cartHTML = `
+  } else {
+    let cartHTML = `
     <h3 class="shopping-bag-title">
       SHOPPING BAG
     </h3>
   `;
 
-  cart.forEach((cart) => {
-    products.forEach((product) => {
-      if (cart.id === product.id) {
-        cartHTML += `
+    cart.forEach((cart) => {
+      products.forEach((product) => {
+        if (cart.id === product.id) {
+          cartHTML += `
           <div class="product-container">
             <div class="row-1-product-container">
               <div class="product-image-container">
@@ -59,9 +62,10 @@ if (cart.length === 0) {
             </div>
           </div>
         `;
-      }
+        }
+      });
     });
-  });
 
-  document.querySelector('.js-cart-container').innerHTML = cartHTML;
+    document.querySelector('.js-cart-container').innerHTML = cartHTML;
+  }
 }

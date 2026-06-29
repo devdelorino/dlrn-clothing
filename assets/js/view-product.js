@@ -4,6 +4,8 @@ import { cart } from "../data/cart.js";
 const selectedProductId = localStorage.getItem('selectedProductId');
 
 renderProduct();
+editQuantity();
+chooseSizeNSaveCart();
 
 /*----- RENDER PRODUCT IN HTML -----*/
 function renderProduct() {
@@ -45,11 +47,11 @@ function renderProduct() {
           </div>
 
           <div class="quantity-button">
-            <button class="subtract-button">
+            <button class="subtract-button js-subtract-button">
               -
             </button>
             <input type="text" class="quantity-input js-quantity-input">
-            <button class="add-button">
+            <button class="add-button js-add-button">
               +
             </button>
           </div>
@@ -66,45 +68,63 @@ function renderProduct() {
   document.querySelector('.js-product-container').innerHTML = productHTML;
 }
 
-/*----- LOOP THROUGH SIZES AND GET THE CLICKED SIZE AND SAVE IT IN VARIABLE BY USING DATASET -----*/
-let sizeResult = '';
 
-document.querySelectorAll('.js-size-button').forEach((sizeButton) => {
-  sizeButton.addEventListener('click', () => {
-    sizeResult = sizeButton.dataset.size;
+function chooseSizeNSaveCart() {
+  /*----- LOOP THROUGH SIZES AND GET THE CLICKED SIZE AND SAVE IT IN VARIABLE BY USING DATASET -----*/
+  let sizeResult = '';
+
+  document.querySelectorAll('.js-size-button').forEach((sizeButton) => {
+    sizeButton.addEventListener('click', () => {
+      sizeResult = sizeButton.dataset.size;
+    });
   });
-});
 
-document.querySelector('.js-add-to-bag-button').addEventListener('click', () => {
+  document.querySelector('.js-add-to-bag-button').addEventListener('click', () => {
 
-  /*----- IF THERE'S NO SIZE CLICKED -----*/
-  if (!sizeResult) {
-
-  } else {
-
-    /*----- FIND MATCHING CART, AND IF IT FINDS IT, IT GETS THE WHOLE INDEX ONCE THE CONDITION IS TRUE AT A SPECIFIC ITERATION -----*/
-    const findMatchingCart = cart.find(cartItem => cartItem.id === selectedProductId && cartItem.size === sizeResult);
-
-    /*----- IF TRUTHY -----*/
-    if (findMatchingCart) {
-
-      /*----- findMatchingCart POINTS TO THE SAME OBJECT (REFERENCE) -----*/
-      findMatchingCart.quantity += Number(quantityValue.value);
+    /*----- IF THERE'S NO SIZE CLICKED -----*/
+    if (!sizeResult) {
 
     } else {
-      cart.push(
-        {
-          id: selectedProductId,
-          size: sizeResult,
-          quantity: Number(quantityValue.value)
-        }
-      );
+      /*----- FIND MATCHING CART, AND IF IT FINDS IT, IT GETS THE WHOLE INDEX ONCE THE CONDITION IS TRUE AT A SPECIFIC ITERATION -----*/
+      const findMatchingCart = cart.find(cartItem => cartItem.id === selectedProductId && cartItem.size === sizeResult);
+
+      /*----- IF TRUTHY -----*/
+      if (findMatchingCart) {
+        /*----- findMatchingCart POINTS TO THE SAME OBJECT (REFERENCE) -----*/
+        findMatchingCart.quantity += quantity;
+
+      } else {
+        cart.push(
+          {
+            id: selectedProductId,
+            size: sizeResult,
+            quantity: quantity
+          }
+        );
+      }
+
+      localStorage.setItem('localStorageCart', JSON.stringify(cart));
     }
+  });
+}
 
-    localStorage.setItem('localStorageCart', JSON.stringify(cart));
-  }
-});
+function editQuantity() {
+  /*----- CREATE A DEFAULT QUANTITY VALUE -----*/
+  let quantity = 1;
 
-/*----- CREATE A DEFAULT QUANTITY VALUE -----*/
-const quantityValue = document.querySelector('.js-quantity-input');
-quantityValue.value = 1;
+  document.querySelector('.js-quantity-input').value = quantity;
+
+  document.querySelector('.js-subtract-button').addEventListener('click', () => {
+    if (quantity > 1) {
+      quantity -= 1;
+
+      document.querySelector('.js-quantity-input').value = quantity;
+    }
+  });
+
+  document.querySelector('.js-add-button').addEventListener('click', () => {
+    quantity += 1;
+
+    document.querySelector('.js-quantity-input').value = quantity;
+  });
+}
