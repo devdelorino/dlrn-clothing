@@ -21,7 +21,7 @@ function renderCart() {
   } else {
     let cartHTML = `
     <h3 class="shopping-bag-title">
-      SHOPPING BAG
+      YOUR CART
     </h3>
   `;
 
@@ -42,7 +42,7 @@ function renderCart() {
               </h2>
             </div>
             <div class="row-2-product-container">
-              <div>
+              <div class="js-delete-button" data-id="${cart.id}">
                 <img src="assets/images/icons/delete-icon.svg">
               </div>
               <h4 class="size-text">
@@ -67,5 +67,20 @@ function renderCart() {
     });
 
     document.querySelector('.js-cart-container').innerHTML = cartHTML;
+
+    document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
+      deleteButton.addEventListener('click', () => {
+        const deleteId = deleteButton.dataset.id;
+
+        cart.splice(index, 1);
+
+        console.log(cart);
+
+        localStorage.setItem('localStorageCart', JSON.stringify(cart));
+
+        renderCart();
+      });
+    });
   }
 }
+

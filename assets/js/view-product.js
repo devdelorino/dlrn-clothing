@@ -2,6 +2,7 @@ import { products } from "../data/products.js";
 import { cart } from "../data/cart.js";
 
 const selectedProductId = localStorage.getItem('selectedProductId');
+let quantity = 1;
 
 renderProduct();
 editQuantity();
@@ -71,7 +72,6 @@ function renderProduct() {
 /*----- EDIT PRODUCT'S QUANTITY -----*/
 function editQuantity() {
   /*----- CREATE A DEFAULT QUANTITY VALUE -----*/
-  let quantity = 1;
 
   document.querySelector('.js-quantity-input').value = quantity;
 
