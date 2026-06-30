@@ -144,7 +144,6 @@ body {
   border-width: 1px;
 }
 
-
 /*----- TABLET AND UP -----*/
 @media (min-width: 768px) {}
 
@@ -154,5 +153,21 @@ body {
   /*----- BODY'S DEFAULT VALUE -----*/
   body {
     padding: 0 13.5% 0.6% 13.5%;
+  }
+
+  /*----- MAIN SECTION -----*/
+  .empty-cart-title {
+    margin-top: 15rem;
+    font-size: 5rem;
+  }
+
+  .empty-cart-description-text {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .empty-shop-link {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 }
