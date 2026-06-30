@@ -71,8 +71,6 @@ function renderProduct() {
 
 /*----- EDIT PRODUCT'S QUANTITY -----*/
 function editQuantity() {
-  /*----- CREATE A DEFAULT QUANTITY VALUE -----*/
-
   document.querySelector('.js-quantity-input').value = quantity;
 
   document.querySelector('.js-subtract-button').addEventListener('click', () => {

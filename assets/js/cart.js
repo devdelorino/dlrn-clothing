@@ -49,15 +49,13 @@ function renderCart() {
                 ${cart.size}
               </h4>
               <div class="button-container">
-                <button class="add-button">
+                <div class="add-button">
                   +
-                </button>
-                <div class="quantity-text">
-                  ${cart.quantity}
                 </div>
-                <button class="subtract-button">
+                <input type="number" class="quantity-input" value="${cart.quantity}">
+                <div class="subtract-button">
                   -
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -68,19 +66,25 @@ function renderCart() {
 
     document.querySelector('.js-cart-container').innerHTML = cartHTML;
 
-    document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
-      deleteButton.addEventListener('click', () => {
-        const deleteId = deleteButton.dataset.id;
-
-        cart.splice(index, 1);
-
-        console.log(cart);
-
-        localStorage.setItem('localStorageCart', JSON.stringify(cart));
-
-        renderCart();
-      });
-    });
+    deleteCart();
   }
 }
 
+
+
+/*----- DELETE PRODUCT FROM CART -----*/
+function deleteCart() {
+  document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+      const deleteId = deleteButton.dataset.id;
+
+      cart.splice(index, 1);
+
+      console.log(cart);
+
+      localStorage.setItem('localStorageCart', JSON.stringify(cart));
+
+      renderCart();
+    });
+  });
+}

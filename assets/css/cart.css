@@ -42,6 +42,8 @@ body {
   justify-content: center;
   width: 100%;
   margin-top: 1.5rem;
+  background-color: rgb(227 219 207);
+  padding: 1rem 0;
 }
 
 .shopping-bag-title {
@@ -81,18 +83,21 @@ body {
 .add-button,
 .subtract-button {
   font-size: 1.3rem;
+  text-align: center;
   height: 1.6rem;
   width: 1.6rem;
   border: solid;
   border-width: 1px;
 }
 
-.quantity-text {
+.quantity-input {
   text-align: center;
   border: solid;
-  border-width: 0;
-  margin: 0.3rem 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-width: 0 1px;
   text-align: center;
+  background-color: rgb(227 219 207);
 }
 
 
