@@ -26,7 +26,7 @@ body {
   object-fit: cover;
   height: 22rem;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
   filter: brightness(50%);
 }
 
@@ -35,6 +35,7 @@ body {
   position: relative;
   color: rgb(255, 255, 255);
   text-align: center;
+  z-index: -1;
 }
 
 
