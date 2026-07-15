@@ -32,9 +32,9 @@ function renderCart() {
     let productHTML = '';
     let orderSummaryHTML = '';
 
-    cart.forEach((cart) => {
+    cart.forEach((cartItem) => {
       products.forEach((product) => {
-        if (cart.id === product.id) {
+        if (cartItem.id === product.id) {
           productHTML += `
           <div class="product-container">
             <div class="row-1-product-container">
@@ -49,18 +49,18 @@ function renderCart() {
               </h2>
             </div>
             <div class="row-2-product-container">
-              <div class="js-delete-button" data-id="${cart.id}">
+              <div class="js-delete-button" data-id="${cartItem.id}">
                 <img src="assets/images/icons/delete-icon.svg" class="delete-icon">
               </div>
               <h4 class="size-text">
-                ${cart.size}
+                ${cartItem.size}
               </h4>
               <div class="button-container">
-                <div class="add-button js-add-button" data-id="${cart.id}">
+                <div class="add-button js-add-button" data-id="${cartItem.id}">
                   +
                 </div>
-                <input type="number" class="quantity-input" value="${cart.quantity}">
-                <div class="subtract-button js-subtract-button" data-id="${cart.id}">
+                <input type="number" class="quantity-input" value="${cartItem.quantity}">
+                <div class="subtract-button js-subtract-button" data-id="${cartItem.id}">
                   -
                 </div>
               </div>
@@ -68,7 +68,7 @@ function renderCart() {
           </div>
         `;
 
-          subtotal += product.price * cart.quantity;
+          subtotal += product.price * cartItem.quantity;
         }
       });
     });
@@ -129,11 +129,9 @@ function editQuantity() {
     button.addEventListener('click', () => {
       const productId = button.dataset.id;
 
-      cart.forEach((cartItem) => {
-        if (cartItem.id === productId) {
-          cartItem.quantity += 1;
-        }
-      });
+      const cartItem = cart.find(item => item.id === productId);
+
+      cartItem.quantity++;
 
       console.log(cart);
 
@@ -147,22 +145,19 @@ function editQuantity() {
   document.querySelectorAll('.js-subtract-button').forEach((button) => {
     button.addEventListener('click', () => {
       const productId = button.dataset.id;
+      const index = cart.findIndex(item => item.id === productId);
 
-      cart.forEach((cartItem, index) => {
-        if (cartItem.id === productId) {
-          cartItem.quantity -= 1;
+      cart[index].quantity--;
 
-          if (cartItem.quantity <= 0) {
-            cart.splice(index, 1);
-          }
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
 
-          console.log(cart);
+      console.log(cart);
 
-          localStorage.setItem('localStorageCart', JSON.stringify(cart));
+      localStorage.setItem('localStorageCart', JSON.stringify(cart));
 
-          renderCart();
-        }
-      });
+      renderCart();
     });
   });
 }
