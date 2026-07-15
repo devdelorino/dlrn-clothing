@@ -24,7 +24,11 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="screenshots/home.png" width="100%">
+  <img src="screenshots/index.png" width="100%">
+</p>
+
+<p align="center">
+  <img src="screenshots/read-story.png" width="100%">
 </p>
 
 <p align="center">
@@ -32,11 +36,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/view-product.png.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="screenshots/cart.png" width="100%">
+  <img src="screenshots/view-product.png" width="100%">
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/story.png" width="100%">
+  <img src="screenshots/cart.png" width="100%">
 </p>
 
 ---
