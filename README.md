@@ -1,66 +1,106 @@
-# DLRN 👕
+<h1 align="center">DLRN 👕</h1>
 
-A modern and responsive e-commerce clothing website built with **HTML, CSS, and Vanilla JavaScript**.
+<p align="center">
+  A modern and responsive e-commerce clothing web application built with HTML, CSS, and Vanilla JavaScript, featuring a clean user experience and modular architecture.
+</p>
 
-🔗 **Live Demo:** https://devdelorino.github.io/e-commerce-clothing/
+<p align="center">
+  <a href="https://devdelorino.github.io/e-commerce-clothing/">
+    <img src="https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/devdelorino/e-commerce-clothing">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="Repository">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+</p>
 
 ---
 
-## Features
+## 📸 Preview
 
-- 🛍️ Browse clothing products
-- 📄 View product details
-- 🛒 Shopping cart
-- ❌ Remove items from cart
-- 💾 Persistent cart with Local Storage
-- 📱 Responsive design
-- ⚡ Modular JavaScript (ES Modules)
+<p align="center">
+  <img src="screenshots/home.png" alt="Home" width="48%">
+  <img src="screenshots/shop.png" alt="Shop" width="48%">
+</p>
+
+<p align="center">
+  <img src="screenshots/product.png" alt="Product Details" width="48%">
+  <img src="screenshots/cart.png" alt="Shopping Cart" width="48%">
+</p>
+
+<p align="center">
+  <img src="screenshots/cart-empty.png" alt="Empty Cart" width="48%">
+  <img src="screenshots/story.png" alt="Read Story" width="48%">
+</p>
 
 ---
 
-## Tech Stack
+## ✨ Features
+
+- Responsive, mobile-first design
+- Browse clothing products
+- View detailed product information
+- Add and manage items in the shopping cart
+- Persistent shopping cart using Local Storage
+- Modular JavaScript architecture with ES Modules
+- Clean and intuitive user interface
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
 
 - HTML5
 - CSS3
-- Vanilla JavaScript (ES6)
-- Local Storage API
-- Git & GitHub
+- JavaScript (ES6 Modules)
+
+### Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+
+### Deployment
+
+- GitHub Pages
 
 ---
 
-## Getting Started
+## 🚀 Future Enhancements
 
-Clone the repository:
+### Shopping Experience
+- Product search
+- Category filtering
+- Wishlist
+- Product reviews
 
-```bash
-git clone https://github.com/devdelorino/e-commerce-clothing.git
-```
+### User Features
+- User authentication
+- Order history
 
-Open `index.html` in your browser or use **VS Code Live Server**.
+### Checkout
+- Checkout flow
+- Payment integration
 
----
+### Admin
+- Admin dashboard
 
-## Roadmap
-
-- [x] Product catalog
-- [x] Product details
-- [x] Shopping cart
-- [x] Responsive layout
-- [ ] Product search
-- [ ] Wishlist
-- [ ] User authentication
-- [ ] Checkout & payments
-
----
-
-## About
-
-DLRN is a personal portfolio project built to improve my front-end development skills by creating a real-world e-commerce application without using a framework. It focuses on clean code, modular JavaScript, and responsive design.
+### Backend
+- REST API with Node.js & Express
+- PostgreSQL database integration
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Denver Delorino**
 
-GitHub: https://github.com/devdelorino
+Aspiring Software Engineer
+
+GitHub: [@devdelorino](https://github.com/devdelorino)
