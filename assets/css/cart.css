@@ -94,6 +94,7 @@ body {
   border: solid;
   border-width: 1px;
   background-color: rgb(244 241 235);
+  cursor: pointer;
 }
 
 .quantity-input {
@@ -148,6 +149,7 @@ body {
   background-color: rgb(244 241 235);
   border: solid;
   border-width: 1px;
+  cursor: pointer;
 }
 
 /*----- TABLET AND UP -----*/
