@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/product.png" width="100%">
+  <img src="screenshots/view-product.png.png" width="100%">
 </p>
 
 <p align="center">
