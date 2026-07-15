@@ -21,6 +21,8 @@ function renderCart() {
     document.querySelector('.js-cart-container').innerHTML = '';
 
   } else {
+    console.log(cart);
+
     let subtotal = 0;
     let shipping = 10;
     let total = 0;
@@ -32,7 +34,7 @@ function renderCart() {
     let productHTML = '';
     let orderSummaryHTML = '';
 
-    cart.forEach((cartItem) => {
+    cart.forEach((cartItem, index) => {
       products.forEach((product) => {
         if (cartItem.id === product.id) {
           productHTML += `
@@ -49,18 +51,18 @@ function renderCart() {
               </h2>
             </div>
             <div class="row-2-product-container">
-              <div class="js-delete-button" data-id="${cartItem.id}">
+              <div class="js-delete-button" data-index="${index}">
                 <img src="assets/images/icons/delete-icon.svg" class="delete-icon">
               </div>
               <h4 class="size-text">
                 ${cartItem.size}
               </h4>
               <div class="button-container">
-                <div class="add-button js-add-button" data-id="${cartItem.id}">
+                <div class="add-button js-add-button" data-index="${index}">
                   +
                 </div>
                 <input type="number" class="quantity-input" value="${cartItem.quantity}">
-                <div class="subtract-button js-subtract-button" data-id="${cartItem.id}">
+                <div class="subtract-button js-subtract-button" data-index="${index}">
                   -
                 </div>
               </div>
@@ -116,7 +118,6 @@ function renderCart() {
     document.querySelector('.js-order-summary-container').innerHTML = orderSummaryHTML;
 
     deleteCart();
-
     editQuantity();
   }
 }
@@ -127,13 +128,9 @@ function editQuantity() {
   /*----- ADD QUANTITY BUTTON -----*/
   document.querySelectorAll('.js-add-button').forEach((button) => {
     button.addEventListener('click', () => {
-      const productId = button.dataset.id;
+      const index = Number(button.dataset.index);
 
-      const cartItem = cart.find(item => item.id === productId);
-
-      cartItem.quantity++;
-
-      console.log(cart);
+      cart[index].quantity++;
 
       localStorage.setItem('localStorageCart', JSON.stringify(cart));
 
@@ -144,16 +141,13 @@ function editQuantity() {
   /*----- SUBTRACT QUANTITY BUTTON -----*/
   document.querySelectorAll('.js-subtract-button').forEach((button) => {
     button.addEventListener('click', () => {
-      const productId = button.dataset.id;
-      const index = cart.findIndex(item => item.id === productId);
+      const index = Number(button.dataset.index);
 
       cart[index].quantity--;
 
       if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
       }
-
-      console.log(cart);
 
       localStorage.setItem('localStorageCart', JSON.stringify(cart));
 
@@ -164,13 +158,11 @@ function editQuantity() {
 
 /*----- DELETE PRODUCT FROM CART -----*/
 function deleteCart() {
-  document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => {
+  document.querySelectorAll('.js-delete-button').forEach((deleteButton) => {
     deleteButton.addEventListener('click', () => {
-      const deleteId = deleteButton.dataset.id;
+      const index = Number(deleteButton.dataset.index);
 
       cart.splice(index, 1);
-
-      console.log(cart);
 
       localStorage.setItem('localStorageCart', JSON.stringify(cart));
 
