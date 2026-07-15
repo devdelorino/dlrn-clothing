@@ -24,27 +24,27 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="screenshots/index.png" width="80%">
+  <img src="screenshots/home.png" width="100%">
 </p>
 
 <p align="center">
-  <img src="screenshots/read-story.png" width="80%">
+  <img src="screenshots/shop.png" width="100%">
 </p>
 
 <p align="center">
-  <img src="screenshots/shop.png" width="80%">
+  <img src="screenshots/product.png" width="100%">
 </p>
 
 <p align="center">
-  <img src="screenshots/view-product.png" width="80%">
+  <img src="screenshots/cart.png" width="100%">
 </p>
 
 <p align="center">
-  <img src="screenshots/cart.png" width="80%">
+  <img src="screenshots/cart-empty.png" width="100%">
 </p>
 
 <p align="center">
-  <img src="screenshots/cart-empty.png" width="80%">
+  <img src="screenshots/story.png" width="100%">
 </p>
 
 ---
@@ -86,27 +86,23 @@
 ### Shopping Experience
 
 - Product search
+- Category filtering
 - Wishlist
 - Product reviews
 
 ### User Features
 
 - User authentication
-- User profiles
 - Order history
 
 ### Checkout
 
 - Checkout flow
 - Payment integration
-- Order confirmation
 
 ### Admin
 
 - Admin dashboard
-- Product management
-- Inventory management
-- Order management
 
 ### Backend
 
