@@ -86,23 +86,27 @@
 ### Shopping Experience
 
 - Product search
-- Category filtering
 - Wishlist
 - Product reviews
 
 ### User Features
 
 - User authentication
+- User profiles
 - Order history
 
 ### Checkout
 
 - Checkout flow
 - Payment integration
+- Order confirmation
 
 ### Admin
 
 - Admin dashboard
+- Product management
+- Inventory management
+- Order management
 
 ### Backend
 
