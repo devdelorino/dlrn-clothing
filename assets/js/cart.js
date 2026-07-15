@@ -50,7 +50,7 @@ function renderCart() {
             </div>
             <div class="row-2-product-container">
               <div class="js-delete-button" data-id="${cart.id}">
-                <img src="assets/images/icons/delete-icon.svg">
+                <img src="assets/images/icons/delete-icon.svg" class="delete-icon">
               </div>
               <h4 class="size-text">
                 ${cart.size}

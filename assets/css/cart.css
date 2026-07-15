@@ -44,6 +44,7 @@ body {
   margin-top: 1.5rem;
   background-color: rgb(227 219 207);
   padding: 1rem 0;
+  height: fit-content;
 }
 
 .shopping-bag-title {
@@ -67,6 +68,10 @@ body {
 .product-name {
   margin-top: 0.3rem;
   font-family: 'DM Serif Display', sans-serif;
+}
+
+.delete-icon {
+  cursor: pointer;
 }
 
 .size-text {
@@ -107,6 +112,7 @@ body {
   padding: 2rem 2.5rem;
   border: solid;
   border-width: 1px;
+  height: 100%;
 }
 
 .order-summary-title {
@@ -156,34 +162,28 @@ body {
   }
 
   /*----- MAIN SECTION -----*/
-  .empty-cart-title {
-    margin-top: 15rem;
-    font-size: 5rem;
-  }
-
-  .empty-cart-description-text {
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
-
-  .empty-shop-link {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
-
   .cart-title {
-    font-size: 2rem;
+    font-size: 25px;
+    margin-bottom: 2rem;
   }
 
   .products-n-order-summary {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-items: center;
     gap: 0.8rem;
+  }
+
+  .product-container {
+    width: 20rem;
+    margin-top: 0;
+  }
+
+  .order-summary-container {
+    margin-top: 0;
   }
 }
