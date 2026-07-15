@@ -24,18 +24,27 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="screenshots/home.png" alt="Home Page" width="48%">
-  <img src="screenshots/shop.png" alt="Shop Page" width="48%">
+  <img src="screenshots/home.png" width="80%">
 </p>
 
 <p align="center">
-  <img src="screenshots/product.png" alt="Product Details Page" width="48%">
-  <img src="screenshots/cart.png" alt="Shopping Cart Page" width="48%">
+  <img src="screenshots/shop.png" width="80%">
 </p>
 
 <p align="center">
-  <img src="screenshots/cart-empty.png" alt="Empty Cart Page" width="48%">
-  <img src="screenshots/story.png" alt="Read Story Page" width="48%">
+  <img src="screenshots/product.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="screenshots/cart.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="screenshots/cart-empty.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="screenshots/story.png" width="80%">
 </p>
 
 ---
