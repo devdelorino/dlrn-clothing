@@ -36,6 +36,11 @@ body {
 }
 
 /*----- BAG WITH PRODUCT/S STYLES -----*/
+.shopping-bag-title {
+  margin-top: 4rem;
+  text-align: center;
+}
+
 .product-container {
   display: flex;
   flex-direction: row;
@@ -47,17 +52,12 @@ body {
   height: fit-content;
 }
 
-.shopping-bag-title {
-  margin-top: 4rem;
-  text-align: center;
-}
-
 .row-1-product-container {
   flex-direction: column;
+  width: 80%;
 }
 
 .product-image-container {
-  width: 16rem;
   margin-right: 0.8rem;
 }
 
