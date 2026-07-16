@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://devdelorino.github.io/e-commerce-clothing/">
+  <a href="https://dlrn-clothing.vercel.app">
     <img src="https://img.shields.io/badge/Live-Demo-2ea44f?style=for-the-badge" alt="Live Demo">
   </a>
   <a href="https://github.com/devdelorino/e-commerce-clothing">
