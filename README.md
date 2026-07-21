@@ -115,9 +115,6 @@
 - Build a REST API using Node.js and Express
 - Integrate PostgreSQL for persistent data storage
 - JWT authentication and authorization
-- Product and order management APIs
-- Inventory management
-- Payment gateway integration
 - Cloud deployment
 
 ---
