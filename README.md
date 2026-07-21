@@ -93,6 +93,7 @@
 ### User Features
 
 - User authentication
+- User profile management
 - Order history
 
 ### Checkout
@@ -104,10 +105,20 @@
 
 - Admin dashboard
 
+### Frontend
+
+- Migrate the frontend to React
+- Integrate TypeScript for improved type safety and maintainability
+
 ### Backend
 
-- REST API with Node.js & Express
-- PostgreSQL database integration
+- Build a REST API using Node.js and Express
+- Integrate PostgreSQL for persistent data storage
+- JWT authentication and authorization
+- Product and order management APIs
+- Inventory management
+- Payment gateway integration
+- Cloud deployment
 
 ---
 
